@@ -1,0 +1,1 @@
+gcloud config list project
