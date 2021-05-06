@@ -5,6 +5,5 @@ PROD_BILLING_URL=$(gcloud run services \
   --region us-central1 \
   --format "value(status.url)")
 echo $PROD_BILLING_URL
-curl -X get -H "Authorization: Bearer \
-  $(gcloud auth print-identity-token)" \
+curl -X get -H "Authorization: Bearer $(gcloud auth print-identity-token)" \
   $PROD_BILLING_URL
